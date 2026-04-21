@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer utilities {
+  .text-stroke {
+    color: transparent; 
+    -webkit-text-stroke: 1px theme('colors.synth.secondary'); 
+  }
+  
+  .text-stroke-primary {
+    color: transparent;
+    -webkit-text-stroke: 1px theme('colors.synth.primary');
+  }
+}
