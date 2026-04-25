@@ -12,7 +12,6 @@ const navItems: NavLinkItem[] = [
   { name: "Projetos", href: "#projects" },
 ];
 
-const SCROLL_THRESHOLD = 20;
 
 export default function Navbar({
   logo = "jonas.dev",
