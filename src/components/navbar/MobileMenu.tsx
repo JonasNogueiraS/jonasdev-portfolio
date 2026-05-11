@@ -1,4 +1,4 @@
-import {TextIndentIcon, TextOutdentIcon } from "@phosphor-icons/react";
+import { FiMenu, FiX } from "react-icons/fi";
 import type { NavLinkItem } from "./types";
 import NavLink from "./NavLink";
 import SocialLinks from "./SocialLinks";
@@ -22,13 +22,12 @@ export default function MobileMenu({
         aria-label="Toggle menu"
       >
         {isOpen ? (
-          <TextOutdentIcon
+          <FiX
             size={28}
-            weight="regular"
             className="text-synth-primary"
           />
         ) : (
-          <TextIndentIcon size={28} weight="regular" />
+          <FiMenu size={28} />
         )}
       </button>
       <div

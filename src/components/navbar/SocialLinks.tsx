@@ -1,8 +1,4 @@
-import {
-  GithubLogoIcon,
-  InstagramLogoIcon,
-  LinkedinLogoIcon,
-} from "@phosphor-icons/react";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import type { SocialLinkItem } from "./types";
 
 interface SocialLinksProps {
@@ -12,17 +8,17 @@ interface SocialLinksProps {
 const socialLinks: SocialLinkItem[] = [
   {
     href: "https://github.com/JonasNogueiraS",
-    icon: GithubLogoIcon,
+    icon: FaGithub,
     label: "GitHub",
   },
   {
     href: "https://linkedin.com/in/jonas-nogueira01",
-    icon: LinkedinLogoIcon,
+    icon: FaLinkedin,
     label: "LinkedIn",
   },
   {
     href: "https://instagram.com/jonas_nogueira_",
-    icon: InstagramLogoIcon,
+    icon: FaInstagram,
     label: "Instagram",
   },
 ];
@@ -38,7 +34,6 @@ export default function SocialLinks({ variant = "desktop" }: SocialLinksProps) {
   return (
     <div className={containerClass}>
       {socialLinks.map(({ href, icon: Icon, label }) => {
-        const weight = Icon === InstagramLogoIcon ? "bold" : "fill";
         return (
           <a
             key={label}
@@ -48,7 +43,7 @@ export default function SocialLinks({ variant = "desktop" }: SocialLinksProps) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Icon size={iconSize} weight={weight} />
+            <Icon size={iconSize} />
           </a>
         );
       })}

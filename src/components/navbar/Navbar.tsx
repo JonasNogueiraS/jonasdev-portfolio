@@ -14,7 +14,6 @@ const navItems: NavLinkItem[] = [
 
 
 export default function Navbar({
-  logo = "jonas.dev",
   className = "",
 }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);

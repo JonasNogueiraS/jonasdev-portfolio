@@ -1,10 +1,5 @@
-import {
-  CpuIcon,
-  RocketIcon,
-  RocketLaunchIcon,
-  TerminalIcon,
-  UserCheckIcon,
-} from "@phosphor-icons/react";
+import { FiCpu, FiTerminal, FiUserCheck } from "react-icons/fi";
+import { FaRocket, FaMapMarkerAlt } from "react-icons/fa";
 import AboutHeader from "./AboutHeader";
 import AboutStats from "./AboutStats";
 import type { AboutHighlightItem, AboutStatItem } from "./types";
@@ -15,25 +10,25 @@ const aboutStatsData: AboutStatItem[] = [
     id: "status",
     label: "Status",
     value: "Open to Work",
-    icon: UserCheckIcon,
+    icon: FiUserCheck,
   },
   {
     id: "formacao",
     label: "Formação",
     value: "Ciência da Computação",
-    icon: TerminalIcon,
+    icon: FiTerminal,
   },
   {
     id: "stack",
     label: "Stack",
     value: "React & Flutter",
-    icon: CpuIcon,
+    icon: FiCpu,
   },
   {
     id: "local",
     label: "Local",
     value: "Caxias, MA",
-    icon: RocketLaunchIcon,
+    icon: FaMapMarkerAlt,
   },
 ];
 
@@ -42,7 +37,7 @@ const aboutHighlightsData: AboutHighlightItem[] = [
     id: "performace",
     title: "Performace",
     description: "Otimização Contínua",
-    icon: RocketIcon,
+    icon: FaRocket,
     primaryColor: "primary",
   },
 ];

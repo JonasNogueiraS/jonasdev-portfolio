@@ -1,7 +1,6 @@
-import type { IconProps } from "@phosphor-icons/react";
-import type { ForwardRefExoticComponent, RefAttributes } from "react";
+import type { IconType } from "react-icons";
 
-type PhosphorIcon = ForwardRefExoticComponent<IconProps & RefAttributes<SVGSVGElement>>
+type PhosphorIcon = IconType;
 
 export interface NavbarProps{
     className?: string;
