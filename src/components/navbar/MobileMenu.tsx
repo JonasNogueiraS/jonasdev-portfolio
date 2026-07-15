@@ -7,12 +7,14 @@ interface MobileMenuProps {
   isOpen: boolean;
   onToggle: () => void;
   navLinks: NavLinkItem[];
+  activeHref?: string;
 }
 
 export default function MobileMenu({
   isOpen,
   onToggle,
   navLinks,
+  activeHref,
 }: MobileMenuProps) {
   return (
     <div className="md:hidden">
@@ -44,6 +46,7 @@ export default function MobileMenu({
                 href={link.href}
                 variant="mobile"
                 onClick={onToggle}
+                isActive={link.href === activeHref}
               />
             ))}
           </div>

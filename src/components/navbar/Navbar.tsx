@@ -4,6 +4,7 @@ import NavLink from "./NavLink";
 import SocialLinks from "./SocialLinks";
 import MobileMenu from "./MobileMenu";
 import { navItems } from "@/data/navData";
+import { useActiveSection } from "@/hooks/useActiveSection";
 
 export interface NavbarProps {
   className?: string;
@@ -13,6 +14,10 @@ export default function Navbar({
   className = "",
 }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const activeId = useActiveSection(
+    navItems.map((item) => item.href.replace("#", ""))
+  );
+  const activeHref = `#${activeId}`;
 
   return (
     <nav
@@ -24,7 +29,12 @@ export default function Navbar({
 
         <div className="hidden md:flex items-center gap-8 ">
           {navItems.map((item) => (
-            <NavLink key={item.name} name={item.name} href={item.href} />
+            <NavLink
+              key={item.name}
+              name={item.name}
+              href={item.href}
+              isActive={item.href === activeHref}
+            />
           ))}
         </div>
 
@@ -34,6 +44,7 @@ export default function Navbar({
           isOpen={isMenuOpen}
           onToggle={() => setIsMenuOpen(!isMenuOpen)}
           navLinks={navItems}
+          activeHref={activeHref}
         />
       </div>
     </nav>

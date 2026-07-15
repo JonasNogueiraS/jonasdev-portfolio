@@ -2,6 +2,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Compensa a navbar fixa (h-20 = 5rem) ao rolar até uma âncora */
+    scroll-padding-top: 5rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
 @layer utilities {
   .text-stroke {
     color: transparent; 
