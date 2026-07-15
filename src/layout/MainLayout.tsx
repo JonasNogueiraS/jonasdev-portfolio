@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import SynthwaveBackground from "../components/background/SynthwaveBackground";
 import Navbar from "../components/navbar/Navbar";
+import Footer from "../components/footer/Footer";
 
 interface MainLayoutProps {
   children?: ReactNode;
@@ -14,7 +15,7 @@ export default function MainLayout({ children }: MainLayoutProps) {
         <SynthwaveBackground />
         <div className="relative z-10 flex flex-col min-h-screen">
           <main className="flex-grow">{children}</main>
-          {/* <Footer/> */}
+          <Footer />
         </div>
       </div>
     </>
