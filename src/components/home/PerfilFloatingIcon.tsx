@@ -1,7 +1,7 @@
-import type { FloatingIconItemProps } from "./types";
+import type { FloatingIconItem } from "@/data/profileData";
 
 interface PerfilFloatingIconProps {
-  icons: FloatingIconItemProps[];
+  icons: FloatingIconItem[];
 }
 
 export default function PerfilFloatingIcon({ icons }: PerfilFloatingIconProps) {

@@ -7,6 +7,8 @@ export interface AboutStatItem {
   label: string;
   value: string;
   icon: ElementType;
+  /** Destaca o valor com a cor de acento (ex.: status "Open to Work"). */
+  highlight?: boolean;
 }
 
 export interface AboutHighlightItem {
@@ -23,6 +25,7 @@ export const aboutStatsData: AboutStatItem[] = [
     label: "Status",
     value: "Open to Work",
     icon: FiUserCheck,
+    highlight: true,
   },
   {
     id: "formacao",
@@ -46,8 +49,8 @@ export const aboutStatsData: AboutStatItem[] = [
 
 export const aboutHighlightsData: AboutHighlightItem[] = [
   {
-    id: "performace",
-    title: "Performace",
+    id: "performance",
+    title: "Performance",
     description: "Otimização Contínua",
     icon: FaRocket,
     primaryColor: "primary",

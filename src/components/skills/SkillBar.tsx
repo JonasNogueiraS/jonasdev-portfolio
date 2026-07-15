@@ -1,4 +1,4 @@
-import type { SkillItem } from "./types";
+import type { SkillItem } from "@/data/skillsData";
 
 interface SkillBarProps {
     skill: SkillItem;

@@ -1,4 +1,5 @@
-import type { AboutHighlightItem } from "./types";
+import type { AboutHighlightItem } from "@/data/aboutData";
+import HighlightCard from "@/components/common/HighlightCard";
 
 interface AboutTextProps {
   highlights: AboutHighlightItem[];
@@ -27,26 +28,15 @@ export default function AboutText({ highlights }: AboutTextProps) {
         limpo em cada desafio.
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {/* Renderizando os cards dinamicamente*/}
-        {highlights.map((item) => {
-          const colorClasses =
-            item.primaryColor === "primary"
-              ? "text-synth-primary hover:border-synth-primary/30"
-              : "text-synth-secondary hover:border-synth-secondary/30";
-
-          return (
-            <div
-              key={item.id}
-              className={`p-2 bg-white/5 border border-white/5 rounded transition-colors group ${colorClasses}`}
-            >
-              <item.icon
-                className={`mb-2 group-hover:scale-110 transition-transform ${item.primaryColor === "primary" ? "text-synth-primary" : "text-synth-secondary"}`}
-              />
-              <h4 className="font-display text-sm text-white">{item.title}</h4>
-              <p className="text-xs text-gray-500 mt-1">{item.description}</p>
-            </div>
-          );
-        })}
+        {highlights.map((item) => (
+          <HighlightCard
+            key={item.id}
+            title={item.title}
+            description={item.description}
+            icon={item.icon}
+            color={item.primaryColor}
+          />
+        ))}
       </div>
     </div>
   );

@@ -1,9 +1,8 @@
 export default function PerfilText() {
   return (
     <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left z-20">
-      <div className="inline-block px-3 py-1 mb-4 rounded-full border bg-synth-secondary/10 border-synth-secondary/30  backdrop-blur-sm">
-        <span className="text-synth-secondary font-mono text-sm tracking-wider">
-          {" "}
+      <div className="inline-block max-w-full px-3 py-1 mb-4 rounded-full border bg-synth-secondary/10 border-synth-secondary/30 backdrop-blur-sm">
+        <span className="text-synth-secondary font-mono text-xs sm:text-sm tracking-wider break-all">
           WELCOME_TO_MY_PORTIFOLIO_V1.0
         </span>
       </div>
@@ -21,7 +20,7 @@ export default function PerfilText() {
         <a href="#projects" className="group relative px-8 py-3 bg-synth-primary/20 hover:bg-synth-primary/40 border border-synth-secondary text-synth-primary hover:text-white font-display font-bold tracking-wider transition-all duration-300 skew-x-[-10deg] hover:shadow-[0_0_20px_#ff00ff]">
           <span className="block skew-x-[10deg]">VER PROJETOS</span> 
         </a>
-        <a href="#about" className="group relative px-8 py-3 bg-transparent border border-white/30 hover:border-synth-secondary text-white font-display font-bold tracking-wider trnasition-all duration-300 skew-x-[-10deg] hover:shadow-[0_0_20px_#ff00ff]">
+        <a href="#about" className="group relative px-8 py-3 bg-transparent border border-white/30 hover:border-synth-secondary text-white font-display font-bold tracking-wider transition-all duration-300 skew-x-[-10deg] hover:shadow-[0_0_20px_#ff00ff]">
           <span className="block skew-x-[10deg]">SOBRE MIM</span>
         </a>
       </div>

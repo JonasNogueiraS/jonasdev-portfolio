@@ -29,7 +29,7 @@ export default function NavLink({
       <span className="relative z-10 font-mono text-base text-gray-300 group-hover:text-white transition-colors duration-300">
         &lt;{name}/&gt;
       </span>
-      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-synth-secondary trnasition-all duration-300 group-hover:w-full shadow-[0_0_8px_theme(colors.synth.secondary)]" />
+      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-synth-secondary transition-all duration-300 group-hover:w-full shadow-[0_0_8px_theme(colors.synth.secondary)]" />
     </a>
   );
 }

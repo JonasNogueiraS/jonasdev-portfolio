@@ -1,27 +1,8 @@
-import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
-import type { SocialLinkItem } from "./types";
+import { socialLinks } from "@/data/navData";
 
 interface SocialLinksProps {
   variant?: "desktop" | "mobile";
 }
-
-const socialLinks: SocialLinkItem[] = [
-  {
-    href: "https://github.com/JonasNogueiraS",
-    icon: FaGithub,
-    label: "GitHub",
-  },
-  {
-    href: "https://linkedin.com/in/jonas-nogueira01",
-    icon: FaLinkedin,
-    label: "LinkedIn",
-  },
-  {
-    href: "https://instagram.com/jonas_nogueira_",
-    icon: FaInstagram,
-    label: "Instagram",
-  },
-];
 
 export default function SocialLinks({ variant = "desktop" }: SocialLinksProps) {
   const containerClass =
@@ -38,7 +19,7 @@ export default function SocialLinks({ variant = "desktop" }: SocialLinksProps) {
           <a
             key={label}
             href={href}
-            className="hover:text-synth-primary transition-all duration-300 hover:-translate-y-1 text-gray-400 hover:text-white"
+            className="text-gray-400 hover:text-synth-primary transition-all duration-300 hover:-translate-y-1"
             aria-label={label}
             target="_blank"
             rel="noopener noreferrer"

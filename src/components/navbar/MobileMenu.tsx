@@ -1,5 +1,5 @@
 import { FiMenu, FiX } from "react-icons/fi";
-import type { NavLinkItem } from "./types";
+import type { NavLinkItem } from "@/data/navData";
 import NavLink from "./NavLink";
 import SocialLinks from "./SocialLinks";
 

@@ -1,16 +1,16 @@
 import { FaReact } from "react-icons/fa";
 import type { ElementType } from "react";
 
-export interface FloatingIconItemProps {
+export interface FloatingIconItem {
   id: string;
   icon?: ElementType;
   text?: string;
   positionClass: string;
   animationClass: string;
-  colorClass: string;
+  colorClass?: string;
 }
 
-export const floatingIconsData: FloatingIconItemProps[] = [
+export const floatingIconsData: FloatingIconItem[] = [
   { 
     id: "icon-react",
     icon: FaReact,

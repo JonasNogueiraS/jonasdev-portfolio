@@ -1,10 +1,13 @@
 import PerfilFloatingIcon from "./PerfilFloatingIcon";
-import type { PerfilImageProps } from "./types";
+import type { FloatingIconItem } from "@/data/profileData";
+interface PerfilImageProps {
+  floatingIcons: FloatingIconItem[];
+}
 
 export default function PerfilImage({ floatingIcons }: PerfilImageProps) {
   return (
     <div className="w-full md:w-1/2 flex justify-center relative">
-      <div className="relative w-72 h-72 md:w-[450px] md:h-[450px] group flex-shrink-0">
+      <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-[450px] md:h-[450px] group flex-shrink-0">
         
         {/* bordas */}
         <div className="absolute inset-0 border border-dashed border-synth-secondary/30 rounded-full animate-spin-slow"></div>

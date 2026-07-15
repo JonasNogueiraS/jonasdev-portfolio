@@ -1,17 +1,13 @@
+import { useState } from "react";
 import Logo from "./Logo";
 import NavLink from "./NavLink";
 import SocialLinks from "./SocialLinks";
 import MobileMenu from "./MobileMenu";
-import { type NavbarProps, type NavLinkItem } from "./types";
-import { useState } from "react";
+import { navItems } from "@/data/navData";
 
-const navItems: NavLinkItem[] = [
-  { name: "Home", href: "#home" },
-  { name: "Sobre", href: "#about" },
-  { name: "Habilidades", href: "#skills" },
-  { name: "Projetos", href: "#projects" },
-];
-
+export interface NavbarProps {
+  className?: string;
+}
 
 export default function Navbar({
   className = "",
