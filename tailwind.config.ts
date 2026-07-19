@@ -29,8 +29,14 @@ const config: Config = {
         "spin-slow": "spin 8s linear infinite",
         "spin-reverse-slow": "spin 15s linear infinite reverse",
         "pulse-glow": "pulseGlow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "marquee": "marquee 30s linear infinite",
       },
       keyframes: {
+        // Rolagem infinita do carrossel de skills (trilho duplicado anda -50%)
+        "marquee": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
         "grid-move": {
           "0%": { transform: "translateY(0)" },
           "100%": { transform: "translateY(40px)" },
