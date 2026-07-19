@@ -1,18 +1,25 @@
-import About from "./components/about/About"
-import Profile from "./components/home/Perfil"
-import Skills from "./components/skills/Skills"
-import Projects from "./components/projects/Projects"
-import MainLayout from "./layout/MainLayout"
+import { lazy, Suspense } from "react"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import PortfolioPage from "./pages/PortfolioPage"
+
+// Lazy: isola o Firebase num chunk próprio, fora da página pública.
+const AdminPage = lazy(() => import("./pages/AdminPage"))
 
 function App() {
-
   return (
-    <MainLayout>
-      <Profile/>
-      <About/>
-      <Skills/>
-      <Projects/>
-    </MainLayout>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<PortfolioPage />} />
+        <Route
+          path="/admin"
+          element={
+            <Suspense fallback={null}>
+              <AdminPage />
+            </Suspense>
+          }
+        />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
