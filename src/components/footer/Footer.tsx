@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
 import { FiArrowUp, FiMail } from "react-icons/fi";
 import { navItems, socialLinks } from "@/data/navData";
+import { siteConfig } from "@/config/site";
 
-const CONTACT_EMAIL = "jonasnogueiira@gmail.com";
+const CONTACT_EMAIL = siteConfig.contactEmail;
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -16,8 +18,8 @@ export default function Footer() {
               JONAS<span className="text-synth-primary">.DEV</span>
             </span>
             <p className="text-sm text-gray-400 max-w-xs">
-              Desenvolvedor focado em interfaces acessíveis e com
-              código limpo.
+              Desenvolvedor front-end e mobile em busca de novas oportunidades,
+              focado em interfaces acessíveis e código limpo.
             </p>
           </div>
 
@@ -74,13 +76,21 @@ export default function Footer() {
           <p className="text-xs text-gray-500 text-center sm:text-left">
             © {year} Jonas Nogueira. Feito com React, TypeScript e Tailwind CSS.
           </p>
-          <a
-            href="#home"
-            className="inline-flex items-center gap-2 font-mono text-xs text-gray-400 hover:text-synth-secondary transition-colors"
-          >
-            Voltar ao topo
-            <FiArrowUp size={16} />
-          </a>
+          <div className="flex items-center gap-5">
+            <Link
+              to="/admin"
+              className="font-mono text-xs text-gray-600 hover:text-synth-primary transition-colors"
+            >
+              admin
+            </Link>
+            <a
+              href="#home"
+              className="inline-flex items-center gap-2 font-mono text-xs text-gray-400 hover:text-synth-secondary transition-colors"
+            >
+              Voltar ao topo
+              <FiArrowUp size={16} />
+            </a>
+          </div>
         </div>
       </div>
     </footer>
