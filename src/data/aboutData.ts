@@ -1,5 +1,5 @@
 import { FiCpu, FiTerminal, FiUserCheck } from "react-icons/fi";
-import { FaRocket, FaMapMarkerAlt } from "react-icons/fa";
+import { FaRocket, FaMapMarkerAlt, FaCode } from "react-icons/fa";
 import type { ElementType } from "react";
 
 export interface AboutStatItem {
@@ -51,8 +51,15 @@ export const aboutHighlightsData: AboutHighlightItem[] = [
   {
     id: "performance",
     title: "Performance",
-    description: "Otimização Contínua",
+    description: "Interfaces rápidas e otimizadas",
     icon: FaRocket,
     primaryColor: "primary",
+  },
+  {
+    id: "clean-code",
+    title: "Código Limpo",
+    description: "Componentização e boas práticas",
+    icon: FaCode,
+    primaryColor: "secondary",
   },
 ];
